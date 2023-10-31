@@ -555,18 +555,19 @@ class React2Role(commands.Cog):
 
         role = mapping[emoji]
         # TODO Allow escalation under some conditions?
-        if role >= member.top_role:
-            await member.send(
-                _(
-                    utx,
-                    (
-                        "You cannot ask for role that's higher "
-                        "than your current highest role."
-                    ),
-                )
-            )
-            await utils.discord.remove_reaction(message, emoji, member)
-            return
+        # This condition isn't desirable for my use case
+#        if role >= member.top_role:
+#            await member.send(
+#                _(
+#                    utx,
+#                    (
+#                        "You cannot ask for role that's higher "
+#                        "than your current highest role."
+#                    ),
+#                )
+#            )
+#            await utils.discord.remove_reaction(message, emoji, member)
+#            return
 
         if reaction_channel.top_role is None or reaction_channel.bottom_role is None:
             # The channel does not have any limits
