@@ -17,7 +17,7 @@ bot_log = logger.Bot.logger()
 guild_log = logger.Guild.logger()
 config = pie.database.config.Config.get()
 
-HIGH_RES_CHANNEL_PREFIX = "HI-RES-"
+HIGH_RES_CHANNEL_PREFIX = ""
 ADJECTIVES = ["Red", "Green", "Blue", "Black", "White", "Pink", "Orange"]
 NOUNS = [
     "cat",
